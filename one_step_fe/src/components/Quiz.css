@@ -1,12 +1,16 @@
-body{
-    background-image: url("/user.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top;
-    /* background-position: 100%; */
+.q-form {
+    color: #647A7D;
+    text-align: center;
+    margin-top: 10%;
+    border: aliceblue;
+    border-style: groove;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 150px;
+    border-radius: 25px;
 }
 
-a {
+.q-form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -20,7 +24,7 @@ a {
     letter-spacing: 4px
   }
   
-  a:hover {
+  .q-form a:hover {
     background: #03e9f4;
     color: #fff;
     border-radius: 5px;
@@ -30,12 +34,12 @@ a {
                 0 0 100px #03e9f4;
   }
   
-  a span {
+  .q-form a span {
     position: absolute;
     display: block;
   }
   
-  a span:nth-child(1) {
+  .q-form a span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -53,7 +57,7 @@ a {
     }
   }
   
-  a span:nth-child(2) {
+  .q-form a span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -72,7 +76,7 @@ a {
     }
   }
   
-  a span:nth-child(3) {
+  .q-form a span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -91,7 +95,7 @@ a {
     }
   }
   
-  a span:nth-child(4) {
+  .q-form a span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;

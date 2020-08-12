@@ -33,7 +33,7 @@ class LogIn extends React.Component {
                 if (res.errors) {
                     alert(res.errors)
                 } else {
-                    this.hendleResponse(res)
+                    this.props.setUser(res)
                 }
             })
         } 
@@ -61,7 +61,7 @@ class LogIn extends React.Component {
             if (res.errors) {
                 alert(res.errors)
             } else {
-                this.hendleResponse(res)
+                this.props.setUser(res)
             }
         })
     }
