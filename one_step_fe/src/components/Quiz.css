@@ -6,8 +6,12 @@
     border-style: groove;
     margin-left: 20%;
     margin-right: 20%;
-    height: 150px;
+    height: 400px;
     border-radius: 25px;
+}
+.checkbox {
+  margin: 5px;
+ text-align: left;
 }
 
 .q-form a {

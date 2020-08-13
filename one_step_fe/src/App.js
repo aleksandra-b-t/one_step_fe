@@ -63,7 +63,7 @@ class App extends React.Component {
         <Switch>
         <Route path="/activities/:id" render={(routerProps)=><ActivityPage/> }/>
         <Route path="/users/:id" render={(routerProps)=><UserPage {...routerProps} user={this.state.currentUser}/> }/>
-        <Route path="/quiz" render={routerProps => <Quiz {...routerProps} /> }/>
+        <Route path="/quiz" render={routerProps => <Quiz {...routerProps} user={this.state.currentUser}/> }/>
         <Route path="/" render={routerProps => <LogIn {...routerProps} setUser={this.setUser}/> }/>
         </Switch>
         
