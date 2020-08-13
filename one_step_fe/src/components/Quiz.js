@@ -106,8 +106,9 @@ class Quiz  extends React.Component {
           }
         )
         .then(res => console.log)
-        this.props.history.push(`users/${this.props.user.id}`)
+        
       })
+      this.props.history.push(`users/${this.props.user.id}`)
     }
       
     render(){
@@ -119,16 +120,13 @@ class Quiz  extends React.Component {
                 <div> {this.questions.map(question => (
                     <Form.Check type="checkbox" className='checkbox' label={question.q} value={question.id}/>
                 ))} </div><br></br>
-                
                 </Form.Group>
                 <a href="#" onClick={this.createNewStep}>
-                <span></span>
                  <span></span>
-        
+                 <span></span>
                     DONE
                  </a>
             </Form>
-        
         )
     }
 }
