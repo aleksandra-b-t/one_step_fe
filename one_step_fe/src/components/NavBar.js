@@ -1,20 +1,22 @@
 import React from 'react';
-import {Navbar} from 'react-bootstrap';
+import {Navbar, Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 
 
 
 const NavBar = props => {
     return(
         <Navbar >
-            <Navbar.Brand href="#home">
             <img
                 src="/logo.png"
-                width="200"
-                height="90"
+                width="150"
+                height="70"
                 className="d-inline-block align-top"
                 alt="logo"
             />
-            </Navbar.Brand>
+            { props.user !== null ? <Button onClick={ props.logout } className="ml-auto">Log Out</Button>:
+                null}
+            
          </Navbar>
     )
 }

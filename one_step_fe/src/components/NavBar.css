@@ -1,3 +1,12 @@
 img.d-inline-block.align-top {
     margin-left: 15px;
 }
+.ml-auto {
+    float: right;
+    position: inherit;
+}
+Button.ml-auto.btn{
+    float: right;
+    position: inherit;
+    
+}

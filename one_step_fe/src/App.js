@@ -12,6 +12,7 @@ import { withRouter } from "react-router-dom"
 class App extends React.Component {
   state = {
     currentUser: null,
+    isNewUser: false,
   }
 
   componentDidMount() {
@@ -34,10 +35,11 @@ class App extends React.Component {
 
   }
 
-  setUser = res => {
+  setUser = (res, isNewUser)=> {
     console.log(res);
+    console.log(isNewUser)
     this.setState(
-      { currentUser: res.user },
+      { currentUser: res.user, isNewUser: isNewUser },
       () => {
         localStorage.token = res.token
         // console.dir(this.props.history)
@@ -46,12 +48,13 @@ class App extends React.Component {
     )
   }
 
-  logout = () => {
+  logout = (e) => {
+    e.preventDefault()
     this.setState(
       { currentUser: null },
       () => {
         localStorage.removeItem("token")
-        this.props.history.push("/login")
+        this.props.history.push("/")
       }
     )
   }
@@ -59,9 +62,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-        <NavBar/>
+        <NavBar logout={this.logout} user={this.state.currentUser}/>
         <Switch>
-        <Route path="/activities/:id" render={(routerProps)=><ActivityPage/> }/>
+        {/* <Route path="/activities/:id" render={(routerProps)=><ActivityPage/> }/> */}
         <Route path="/users/:id" render={(routerProps)=><UserPage {...routerProps} user={this.state.currentUser}/> }/>
         <Route path="/quiz" render={routerProps => <Quiz {...routerProps} user={this.state.currentUser}/> }/>
         <Route path="/" render={routerProps => <LogIn {...routerProps} setUser={this.setUser}/> }/>

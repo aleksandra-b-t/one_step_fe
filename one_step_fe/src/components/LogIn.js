@@ -11,7 +11,6 @@ class LogIn extends React.Component {
         age: '',
         gender: '',
         email: '',
-
     }
 
     toggleNewUser = () => this.setState(prevState => ({ isNewUser: !prevState.isNewUser, password: '', name: '', confirmation: '', gender: '', age: '', email: ''}))
@@ -33,7 +32,7 @@ class LogIn extends React.Component {
                 if (res.errors) {
                     alert(res.errors)
                 } else {
-                    this.props.setUser(res)
+                    this.props.setUser(res, this.state.isNewUser)
                 }
             })
         } 
@@ -83,7 +82,7 @@ class LogIn extends React.Component {
     renderLogin = () => {
         const { name, password } = this.state;
         return (
-            <div id="simple-flex-col">
+            <div id="simple-flex-col-log">
                 <input name="name" placeholder="Name" value={name} onChange={this.handleChange}/>
                 <input name="password" placeholder="Password" type="password" value={password} onChange={this.handleChange}/>
             </div>
@@ -92,7 +91,7 @@ class LogIn extends React.Component {
     renderSignup = () => {
         const { password, name, confirmation,age, email , gender} = this.state;
         return (
-            <div id="simple-flex-col">
+            <div id="simple-flex-col-sign">
                 <input name="name" placeholder="Name" value={name} onChange={this.handleChange}/><br></br>
                 <input name="age" placeholder="Age" value={age} onChange={this.handleChange}/><br></br>
                 <input name="email" placeholder="Email" value={email} onChange={this.handleChange}/><br></br>
@@ -109,7 +108,7 @@ class LogIn extends React.Component {
     render(){
         let { isNewUser } = this.state;
         return (
-            <div className="simple-flex-col">
+            <div className="ath-form">
                 <h3>{isNewUser ? 'Sign Up' : 'Login'}</h3>
                 { isNewUser ? this.renderSignup() : this.renderLogin() }
                 <button type="submit" onClick={this.handleSubmit}>Submit</button>

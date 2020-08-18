@@ -1,12 +1,11 @@
 .q-form {
     color: #647A7D;
     text-align: center;
-    margin-top: 10%;
     border: aliceblue;
     border-style: groove;
     margin-left: 20%;
     margin-right: 20%;
-    height: 400px;
+    height: auto;
     border-radius: 25px;
 }
 .checkbox {

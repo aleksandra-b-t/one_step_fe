@@ -3,7 +3,18 @@ body{
     background-position: 100%;
 
 }
-.simple-flex-col {
+.ath-form {
+    color: #647A7D;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: aliceblue;
+    border-style: groove;
+    border-radius: 25px;
+
+}
+.simple-flex-col-log {
     color: #647A7D;
     text-align: center;
     margin-top: 10%;
@@ -13,4 +24,39 @@ body{
     margin-right: 20%;
     height: 150px;
     border-radius: 25px;
+}
+
+.simple-flex-col-sign {
+    color: #647A7D;
+    text-align: center;
+    margin-top: 10%;
+    border: aliceblue;
+    border-style: groove;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 250px;
+    border-radius: 25px;
+}
+input {
+    margin: 10px;
+    font-size: medium;
+    font-family: "Gill Sans", sans-serif;
+    opacity: 0.6;
+}
+button {
+    margin: 8px;
+    color: black;
+    background: #e7e7e7;
+    border-radius: 25px;
+    opacity: 0.7;
+    font-family: "Gill Sans", sans-serif;
+    font-size: medium;
+}
+div {
+    margin: 10px;
+    font-weight: bolder;
+}
+h3 {
+    font-family: "Gill Sans", sans-serif;
+    font-size: larger;
 }
