@@ -89,6 +89,8 @@ class Quiz  extends React.Component {
     //   id = this.props.match.params.id
 
     createNewStep = () => {
+        const id= JSON.parse(localStorage.currentUser).id
+        console.log(id)
      this.state.answers.map(num => {
         fetch("http://localhost:3000/steps",
           {
@@ -99,7 +101,7 @@ class Quiz  extends React.Component {
               "Accept": "Application/json"
             },
             body: JSON.stringify({
-              user_id: this.props.user.id,
+              user_id: id,
               activity_id: num,
               check: false
             })
@@ -114,15 +116,18 @@ class Quiz  extends React.Component {
     render(){
         // console.dir(this.props.match)
     return (
-        
+        <>
+            
             <Form className='q-form' onChange={this.selectedEle}> 
             <Form.Group controlId="formBasicCheckbox">
+            <p className='match'>Select those, which match you the most:</p><br></br>
                 <div> {this.questions.map(question => (
                     <Form.Check type="checkbox" className='checkbox' label={question.q} value={question.id}/>
                 ))} </div><br></br>
                 </Form.Group>
                  <button className='sub-in' onClick={this.createNewStep}>DONE</button>
             </Form>
+         </>
         )
     }
 }

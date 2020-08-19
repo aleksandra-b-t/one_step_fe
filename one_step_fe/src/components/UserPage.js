@@ -32,13 +32,16 @@ class UserPage extends React.Component {
   };
 
   componentDidMount() {
-    fetch(`http://localhost:3000/users/${this.props.user.id}`, {
+    const id= JSON.parse(localStorage.currentUser).id
+    console.log(id)
+    fetch(`http://localhost:3000/users/${id}`, {
       headers: {
         Authorization: localStorage.token,
       },
     })
       .then((res) => res.json())
       .then((res) => this.setState({ activities: res.activities }));
+      console.log(this.state.activities)
   }
   toggleActive = (n) => {
     let copy = [...this.state.activities];
@@ -73,6 +76,7 @@ class UserPage extends React.Component {
         <div className="component">
         <img src="/back02.jpg" width="550" height="300" alt="pic" />
         <div className="user-welcom">
+        
           HI THERE! {this.props.user.name}.<br></br>
           All too often we let the fear of the unknown stop us. <br></br>
           But pushing ourselves out of our comfort zones is actually good for us. <br></br>
@@ -82,6 +86,8 @@ class UserPage extends React.Component {
           </div>
           </div>
           <br></br>
+          <img src='/for_you.png' className='for' width="300" height="70" alt="for" />
+          
           <br></br>
           <div className="row">
             {this.state.activities
@@ -89,8 +95,9 @@ class UserPage extends React.Component {
               .map((a) => (
                 <div className="card">
                   <div>
+                  <img src={a.img_url} width="200" height="150" alt="pic" />
                     <div>{a.name}</div>
-                    {/* <div.Text>{a.description.split(".")[0]}.</div.Text> */}
+                    
                   </div>
                   <button
                     variant="primary"
@@ -103,7 +110,11 @@ class UserPage extends React.Component {
               ))}
               <button className='next' onClick={this.updateIndex}> <img src="/next.png" width="50" height="50" alt="next"/></button>
           </div>
-          
+          <div className='decor'>
+          <img src='/jerk-chicken.png' className='pic' width="90" height="80" alt="pic" />
+          <img src='/hourglass.png' className='pic' width="90" height="80" alt="pic" />
+          <img src='/camera.png' className='pic' width="90" height="80" alt="pic" />
+          </div>
         {/* </div> */}
         </>
       );
@@ -114,6 +125,11 @@ class UserPage extends React.Component {
       return (
         <div className="welcome-note" onClick={this.renderQ}>
           {" "}
+          <div className='decor'>
+          <img src='/chess-clock.png' className='pic' width="100" height="90" alt="pic" />
+          <img src='/chess-piece.png' className='pic' width="100" height="90" alt="pic" />
+          <img src='/ramen.png' className='pic' width="100" height="90" alt="pic" />
+          </div><br></br>
           <p className="title">
             WELCOME ABOARD! WE'RE SO GLAD YOU'VE JOINED US
           </p>
@@ -144,7 +160,7 @@ class UserPage extends React.Component {
     } else {
       return (
         <>
-        <div className="act-name">{this.state.activeId.name} </div>
+        <div className="act-name"><p id='name'>{this.state.activeId.name} </p></div>
         <div className="text-center">
           <div class="container">
             
@@ -168,13 +184,13 @@ class UserPage extends React.Component {
           <br></br>
         </div>
         <div className="buttons">
-            <button
+            <button className='del-but'
               variant="primary"
               onClick={() => this.deleteStep(this.state.activeId)}
             >
               Not For Me
             </button>
-            <button variant="primary" onClick={this.toggleNull}>
+            <button className='back-btn' variant="primary" onClick={this.toggleNull}>
               Maybe Later
             </button>
           </div>

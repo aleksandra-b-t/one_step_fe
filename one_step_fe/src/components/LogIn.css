@@ -45,10 +45,10 @@ input {
 }
 button {
     margin: 8px;
-    opacity: 0.7;
+    opacity: 1;
     font-family: "Gill Sans", sans-serif;
     font-size: medium;
-    background-color: #8a7356;
+    background-color: #C0AF9B;
     border: none;
     color: white;
     padding: 10px 42px;

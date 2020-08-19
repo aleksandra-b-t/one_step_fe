@@ -41,8 +41,10 @@ class App extends React.Component {
     this.setState(
       { currentUser: res.user, isNewUser: isNewUser },
       () => {
+        localStorage.setItem("currentUser", JSON.stringify(this.state.currentUser))
         localStorage.token = res.token
-        // console.dir(this.props.history)
+        console.log(localStorage)
+        // console.log(this.state)
         this.props.history.push(`users/${res.user.id}`)
       }
     )
@@ -51,9 +53,11 @@ class App extends React.Component {
   logout = (e) => {
     e.preventDefault()
     this.setState(
-      { currentUser: null },
+      { currentUser: {} },
       () => {
         localStorage.removeItem("token")
+        localStorage.removeItem("currentUser")
+        console.log(localStorage)
         this.props.history.push("/")
       }
     )

@@ -28,7 +28,7 @@ const NavBar = (props) => {
         
         </ul>
       </nav>
-        {props.user !== null ? (
+        {props.user !== {} ? (
           <button onClick={props.logout} className="ml-auto">
             LogOut
           </button>
