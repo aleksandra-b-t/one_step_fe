@@ -1,24 +1,40 @@
-import React from 'react';
-import {Navbar, Button} from 'react-bootstrap';
-import {Link} from 'react-router-dom'
+import React from "react";
+import {
+  Navbar,
+  Button,
+  Container,
+  Col,
+  Row,
+  Nav,
+  NavDropdown,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
+const NavBar = (props) => {
+  return (
+    <div className="nav">
+      <nav className="nav-bar">
+        <ul> <li>
+          <div className="text-left">
+            {/* {" "} */}
+            You just need
+          </div></li>
+          <li><div>
+            {/* {" "} */}
+            <img src="/logo01.png" width="250" height="100" alt="logo" />
+          </div></li>
+          <li><div className="text-right">to change your life ...</div></li>
+        
+        </ul>
+      </nav>
+        {props.user !== null ? (
+          <button onClick={props.logout} className="ml-auto">
+            LogOut
+          </button>
+        ) : null}
+    </div>
+  );
+};
 
-
-const NavBar = props => {
-    return(
-        <Navbar >
-            <img
-                src="/logo.png"
-                width="150"
-                height="70"
-                className="d-inline-block align-top"
-                alt="logo"
-            />
-            { props.user !== null ? <Button onClick={ props.logout } className="ml-auto">Log Out</Button>:
-                null}
-            
-         </Navbar>
-    )
-}
-
-export default NavBar
+export default NavBar;

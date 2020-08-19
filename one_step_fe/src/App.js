@@ -60,8 +60,8 @@ class App extends React.Component {
   }
   render(){
     return (
-      <div className="App">
-        <header className="App-header">
+      <div >
+        {/* <header > */}
         <NavBar logout={this.logout} user={this.state.currentUser}/>
         <Switch>
         {/* <Route path="/activities/:id" render={(routerProps)=><ActivityPage/> }/> */}
@@ -70,7 +70,7 @@ class App extends React.Component {
         <Route path="/" render={routerProps => <LogIn {...routerProps} setUser={this.setUser}/> }/>
         </Switch>
         
-        </header>
+        {/* </header> */}
       </div>
     );
   }

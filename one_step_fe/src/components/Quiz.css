@@ -1,19 +1,19 @@
 .q-form {
-    color: #647A7D;
     text-align: center;
-    border: aliceblue;
-    border-style: groove;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
     height: auto;
-    border-radius: 25px;
+    font-size: larger;
+    font-weight: bold;
+    color: #584937;
+    background-color: #e7ddd9;
+  
 }
 .checkbox {
   margin: 5px;
  text-align: left;
 }
 
-.q-form a {
+/* .q-form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -115,4 +115,4 @@
     50%,100% {
       bottom: 100%;
     }
-  }
+  } */

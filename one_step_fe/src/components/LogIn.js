@@ -111,8 +111,8 @@ class LogIn extends React.Component {
             <div className="ath-form">
                 <h3>{isNewUser ? 'Sign Up' : 'Login'}</h3>
                 { isNewUser ? this.renderSignup() : this.renderLogin() }
-                <button type="submit" onClick={this.handleSubmit}>Submit</button>
-                <div onClick={this.toggleNewUser}>{isNewUser ? "Login Instead" : "Sign Up Instead"}</div>
+                <button className='sub-in' type="submit" onClick={this.handleSubmit}>Submit</button>
+                <div className='option' onClick={this.toggleNewUser}>{isNewUser ? "Login Instead" : "Sign Up Instead"}</div>
             </div>
         )
     }

@@ -1,25 +1,28 @@
-body{
-    background-image: url("/login.jpg");
+/* .LogIn{
+    background-image: url("/back02.jpg");
     background-position: 100%;
-
-}
+    background-repeat: no-repeat;
+    background-position: top;
+} */
 .ath-form {
-    color: #647A7D;
+    color: beige;
+    /* color: #647A7D; */
     text-align: center;
     margin-top: 10%;
     margin-left: 20%;
     margin-right: 20%;
     border: aliceblue;
-    border-style: groove;
-    border-radius: 25px;
+    /* border-style: groove;
+    border-radius: 25px; */
+    background-color: #B09B82;
+    border-style: solid;
+    border-color: #c8b9a7;
+    border-width: thick;
 
 }
 .simple-flex-col-log {
-    color: #647A7D;
     text-align: center;
     margin-top: 10%;
-    border: aliceblue;
-    border-style: groove;
     margin-left: 20%;
     margin-right: 20%;
     height: 150px;
@@ -27,11 +30,8 @@ body{
 }
 
 .simple-flex-col-sign {
-    color: #647A7D;
     text-align: center;
     margin-top: 10%;
-    border: aliceblue;
-    border-style: groove;
     margin-left: 20%;
     margin-right: 20%;
     height: 250px;
@@ -45,18 +45,45 @@ input {
 }
 button {
     margin: 8px;
-    color: black;
-    background: #e7e7e7;
-    border-radius: 25px;
     opacity: 0.7;
     font-family: "Gill Sans", sans-serif;
     font-size: medium;
+    background-color: #8a7356;
+    border: none;
+    color: white;
+    padding: 10px 42px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
 }
-div {
-    margin: 10px;
-    font-weight: bolder;
-}
+
 h3 {
     font-family: "Gill Sans", sans-serif;
     font-size: larger;
+}
+
+.option {
+    
+    height: 45px;
+    margin-top: 8px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.sub-in {
+    margin: 8px;
+    opacity: 0.7;
+    font-family: "Gill Sans", sans-serif;
+    font-size: medium;
+    background-color: #8a7356;
+    border: none;
+    color: white;
+    padding: 10px 42px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
 }

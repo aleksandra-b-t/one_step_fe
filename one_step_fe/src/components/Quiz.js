@@ -121,11 +121,7 @@ class Quiz  extends React.Component {
                     <Form.Check type="checkbox" className='checkbox' label={question.q} value={question.id}/>
                 ))} </div><br></br>
                 </Form.Group>
-                <a href="#" onClick={this.createNewStep}>
-                 <span></span>
-                 <span></span>
-                    DONE
-                 </a>
+                 <button className='sub-in' onClick={this.createNewStep}>DONE</button>
             </Form>
         )
     }

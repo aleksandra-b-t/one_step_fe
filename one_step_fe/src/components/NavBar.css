@@ -1,12 +1,41 @@
-img.d-inline-block.align-top {
-    margin-left: 15px;
+.nav-bar{
+    display: flex;
+    flex-direction: row;
 }
-.ml-auto {
-    float: right;
-    position: inherit;
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
-Button.ml-auto.btn{
-    float: right;
-    position: inherit;
-    
+nav li {
+    display: inline-block;
+    margin-left: 50px;
+    padding-top: 23px;
+    position: relative;
+    margin-bottom: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    color: #584937;
+  }
+  .ml-auto {
+    display: block;
+    padding: 10px;
+    /* justify-content: flex-end; */
+    position: relative;
+    left: 20%;
+
+    /* position: relative;
+    top: -5px; */
+
+  }
+  ul {
+    display: flex;
+  }
+  ul:first-child {
+    align-items: center;
+  }
+  button.ml-auto {
+    height: 30px;
+    top: 50px;
 }
